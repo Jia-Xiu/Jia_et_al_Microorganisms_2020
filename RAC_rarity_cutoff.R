@@ -46,7 +46,7 @@ for (j in 1:nrow(df)) {
   }
 }
 
-write.csv(t(df), "rare.csv")
+write.csv(t(df), paste(dataset.name, "rare.csv", sep = "_"))
 
 # the common biosphere
 df <- com
@@ -57,4 +57,4 @@ for (j in 1:nrow(df)) {
     }
 }
 
-write.csv(t(df), "common.csv")
+write.csv(t(df), paste(dataset.name, "common.csv", sep = "_"))

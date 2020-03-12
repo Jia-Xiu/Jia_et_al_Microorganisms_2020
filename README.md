@@ -8,18 +8,18 @@ Work at QIIME2/2019.10 environment, using the following script
 	 
 ## Using R for downstream analysis 
 
-alpha & beta-diversity analysis for the whole dataset
+alpha & beta-diversity analysis:
 * [alpha_diversity_dna_rna.R](https://github.com/Jia-Xiu/Jia_et_al_2020/blob/master/alpha_diversity_dna_rna.R)
 * [beta_diversity_dna_rna.R](https://github.com/Jia-Xiu/Jia_et_al_2020/blob/master/beta_diversity_dna_rna.R)
 
-summarize the relative abundance of phyla
+Summarize the relative abundance of phyla:
 * [taxa_summarize_dna_rna.R](https://github.com/Jia-Xiu/Jia_et_al_2020/blob/master/taxa_summarize_dna_rna.R)
 
-analysis for the rare and common biospheres
-* Rare_biosphere.R; 
+Analyze the rare biopphere:
+* Rare_biosphere.R
 
-community assembly analysis
+Community assembly analysis:
 * [https://github.com/stegen/Stegen_etal_ISME_2013](https://github.com/stegen/Stegen_etal_ISME_2013)
 
-## Authors
+## Author
 * **Jia, Xiu** 

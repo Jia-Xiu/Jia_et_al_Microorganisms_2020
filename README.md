@@ -13,7 +13,7 @@ alpha & beta-diversity analysis for the whole dataset
 * beta_diversity_dna_rna.R
 
 summarize the relative abundance of phyla
-*taxa_summarize_dna_rna.R
+* taxa_summarize_dna_rna.R
 
 analysis for the rare and common biospheres
 * Rare_biosphere.R; 

@@ -1,16 +1,11 @@
 # alpha diversity analysis for the DMA/RNA dataset
-# Date: 08-08-2019 
-# Update: 19-09-2019
+# Update: 11-03-2020
 # Author: Jia, Xiu
 
 rm(list=ls())
 
 # load the directory
-directory = 'C:/Users/P278113/Dropbox'
-#directory = '~/Dropbox'
-subfolder = 'Schier/DNA_RNA'
-
-setwd(paste(directory, subfolder, sep="/"))
+setwd()
 getwd()
 
 # load packages
@@ -254,89 +249,5 @@ ggqqplot(df[which(df$Datasets == "RNA"),]$richness, ylab = "richness")
 
 #ggsave("Correlation_density_rich_sim_dataset_year.jpg", width = 14, height = 7, units = "cm", device = "jpeg", f, scale = 1.5, dpi = 300)
 #ggsave("Correlation_density_rich_sim_dataset_year.pdf", width = 15, height = 7.5, units = "cm", f, scale = 1.5, dpi = 300)
-
-# Stats for each stage
-(res <- wilcox.test(simpson ~ Datasets, data = df[which(df$Year == "110"),], exact = FALSE))
-
-
-# FORCE TO DO Pearson correlation ------------------------------------------------------------------
-(p1 <- ggscatter(df, x = "Year", y = "richness", color = "Datasets",
-                 add = "reg.line", conf.int = TRUE) + 
-   #stat_cor(aes(color = Datasets), label.x = 3) +
-   scale_color_manual(values=my_palette) + 
-   scale_x_continuous(breaks = c(0, 10, 40, 70, 110))+
-   #stat_cor(aes(color = Datasets, label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), label.x = 3) +
-   mytheme)
-
-(p2 <- ggscatter(df, x = "Year", y = "simpson", color = "Datasets",
-                 add = "reg.line", conf.int = TRUE) + 
-    #stat_cor(aes(color = Datasets), label.x = 3) +
-    scale_color_manual(values=my_palette) + 
-    scale_x_continuous(breaks = c(0, 10, 40, 70, 110))+
-    #stat_cor(aes(color = Datasets, label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), label.x = 3) +
-    mytheme)
-
-f <- ggarrange(p1, p2, labels = c("A", "B"), common.legend = TRUE, legend = "right", ncol = 2)
-f
-
-#ggsave("Correlation_alpha_div_year.png", width = 17, height = 7, units = "cm", f, scale = 1.5, dpi = 300)
-#ggsave("Correlation_alpha_div_year.pdf", width = 17, height = 7, units = "cm", f, scale = 1.5)
-
-
-
-# Two-way ANOVA -----------------------------------------------------------------------------------------
-
-my_palette <- c(brewer.pal(9, "Set1")[c(1:2)])
-
-# Line plots with multiple groups
-(f1 <- ggline(df, x = "Year", y = "richness", 
-              linetype = "Datasets", shape = "Datasets", color = "Datasets",
-              point.size = 3,
-              add = c("mean_se", "dotplot"),
-              palette = my_palette)+
-    labs(x="Stage of succession (Years)", y="Richness", title=" ") +
-    mytheme)
-
-(f2 <- ggline(df, x = "Year", y = "simpson", 
-              linetype = "Datasets", shape = "Datasets", color = "Datasets",
-              point.size = 3,
-              add = c("mean_se", "dotplot"),
-              palette = my_palette)+
-    labs(x="Stage of succession (Years)", y="simpson", title=" ") +
-    mytheme)
-
-f <- ggarrange(f1, f2, labels = c("A", "B"), common.legend = TRUE, legend = "right", ncol = 2)
-f
-
-#ggsave("Richness_simpson_Datasets_x_year_lineplot.png", width = 17, height = 7.5, units = "cm", f, scale = 1.5, dpi = 300)
-#ggsave("Richness_simpson_Datasets_x_year_lineplot.pdf", width = 17, height = 7.5, units = "cm", f, scale = 1.5)
-
-# Two-way interaction plot
-interaction.plot(x.factor = df$Year, trace.factor = df$Datasets, 
-                 response = df$richness, fun = mean, 
-                 type = "b", legend = TRUE, 
-                 xlab = "Stage of succession (Years)", ylab="Richness",
-                 pch=c(1,19), col = my_palette)
-
-
-# richness, shannon, simpson and PD
-aov <- aov(richness ~ Datasets * Year, data = df) # NO interaction effect
-summary(aov)
-capture.output(summary(aov), file = "anova_results_richness.csv")
-
-# check the homogeneity of variances
-bartlett.test(richness ~ interaction(Datasets, Year), data=df)
-# p > 0.05, suggesting that the variance across groups is not statistically significantly different.
-plot(aov, 1)
-# there is no evident relationships between residuals and fitted values (the mean of each groups), which is good. 
-# So, we can assume the homogeneity of variances.
-
-# check normality
-plot(aov, 2) # draw the correlation between a given sample and the normal distribution.
-ggqqplot(df$richness)
-
-# Shapiro-Wilk test of normality for univariate
-shapiro.test(df$richness)
-# p-value > 0.05, implying that the distribution of the data are not significantly different from normal distribution. 
 
 

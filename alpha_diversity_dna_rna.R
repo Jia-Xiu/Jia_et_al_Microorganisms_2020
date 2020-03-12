@@ -1,4 +1,4 @@
-# alpha diversity analysis for the DMA/RNA dataset
+# alpha diversity analysis for the DNA/RNA dataset
 # Update: 11-03-2020
 # Author: Jia, Xiu
 

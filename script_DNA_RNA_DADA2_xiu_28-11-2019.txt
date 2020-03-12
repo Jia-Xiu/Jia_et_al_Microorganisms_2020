@@ -1,7 +1,6 @@
 # This script is for the 16S amplicon sequence analysis (515F-806R) of DNA/cDNA analysis
 # Sequeincing on Illumina Miseq platform (150*2), Argonne (DNA and cDNA samples run seperately)
 # RNA-run 60 samples; DNA-run 104 samples, ratio=1.7; where after demux, sequence counts in total: DNA 7,798,981; RNA 9,852,975, ratio=1.44
-# Builted on 08-03-2019 by Jia Xiu
 # Updated on 30-11-2019 by Jia Xiu
 
 # if submit job to Peregrine HPC as .sh file, i.e. import_multiplex_seq.sh, add following header to .sh file

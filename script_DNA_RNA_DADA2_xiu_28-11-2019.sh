@@ -10,7 +10,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
 #SBATCH --mem=12GB
-#SBATCH --partition=gelifes
 #SBATCH -o import-%j.out
 #SBATCH -e import-%j.error
 #SBATCH --mail-type=FAIL,END

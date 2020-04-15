@@ -8,10 +8,8 @@ rm(list=ls())
 setwd()
 
 library(reshape2)
-library(vegan)
 library(ggplot2)
 library(RColorBrewer)
-library(ggpubr)
 library(doBy)
 display.brewer.all()
 

@@ -13,8 +13,6 @@ library(ggplot2)
 library(RColorBrewer)
 library(ggpubr)
 library(doBy)
-library(VennDiagram)
-library(cowplot)
 display.brewer.all()
 
 

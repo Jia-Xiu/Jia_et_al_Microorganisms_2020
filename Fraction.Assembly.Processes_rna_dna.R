@@ -7,19 +7,24 @@ rm(list=ls())
 # Load the library
 library(vegan)
 library(ggplot2)
-library(RColorBrewer)
-library(reshape2)
-library(scales)
+library(RColorBrewer) #display.brewer.all()
+library(reshape2) # for the boxplot with 
+library(scales) # for pie plot
 library(ggforce)
 library(ggpubr)
 library(dplyr)
 
 
 # load directory --------------------------------------------------------------------------------------------
-setwd()
+directory = 'C:/Users/P278113/Dropbox'
+# directory = '~/Dropbox/'
+subfolder = 'Schier/cDNA_DNA'
+
+setwd(paste(directory, subfolder, sep="/"))
+getwd()
 
 # all three data sets ---------------------------------------------------------------------------------------
-data.set.names = c('DNA', 'RNA') 
+data.set.names = c('DNA', 'RNA') # data.set.name = 'RNA'
 
 # make a matrix to store the number of pairwise samples of each assembly process
 df <- matrix(NA, nrow = 2, ncol = 5)

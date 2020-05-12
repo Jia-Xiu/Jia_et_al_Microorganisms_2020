@@ -16,11 +16,7 @@ library(dplyr)
 
 
 # load directory --------------------------------------------------------------------------------------------
-directory = '~/Dropbox/'
-subfolder = 'Schier/DNA_RNA'
-
-setwd(paste(directory, subfolder, sep="/"))
-getwd()
+setwd()
 
 # all three data sets ---------------------------------------------------------------------------------------
 data.set.names = c('DNA', 'RNA') # data.set.name = 'RNA'

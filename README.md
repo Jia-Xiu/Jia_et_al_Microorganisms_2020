@@ -16,7 +16,8 @@ Work at [QIIME2/2019.10](https://docs.qiime2.org/2019.10/) environment, using th
 	* [taxa_summarize_dna_rna.R](https://github.com/Jia-Xiu/Jia_et_al_Microorganisms_2020/blob/master/taxa_summarize_dna_rna.R)
 
 * Analyze the rare biopphere:
-	* Rare_biosphere.R
+	* [Rare_biosphere_analysis_RNA_DNA.R](https://github.com/Jia-Xiu/Jia_et_al_Microorganisms_2020/blob/master/Rare_biosphere_analysis_RNA_DNA.R)
+	* [TruncateTable.R](https://github.com/Jia-Xiu/rare_biosphere_assembly/blob/master/TruncateTable.R)
 
 * Community assembly analysis:
 	* [https://github.com/stegen/Stegen_etal_ISME_2013](https://github.com/stegen/Stegen_etal_ISME_2013)

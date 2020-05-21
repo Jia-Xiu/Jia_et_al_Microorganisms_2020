@@ -25,3 +25,4 @@ Work at [QIIME2/2019.10](https://docs.qiime2.org/2019.10/) environment, using th
 
 ## Author
 * **Jia, Xiu** 
+Email: xibeihenai@gmail.com

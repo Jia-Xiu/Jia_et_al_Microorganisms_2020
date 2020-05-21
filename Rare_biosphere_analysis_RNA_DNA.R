@@ -2,17 +2,15 @@
 # Author: Jia Xiu
 # Date: 2020-03-04
 
-# load packages --------------------------------------------------------------------------------------------
 rm(list=ls())
 
+# load packages
 library(ggplot2)
 library(VennDiagram)
 library(ggpubr) 
 library(reshape2)
 
 # change directory
-
-setwd(paste(directory, subfolder, sep="/"))
 getwd()
 
 # plot theme
@@ -25,16 +23,16 @@ mytheme <- theme_bw()+
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank())
 
+
 # Set the cutoff for rarity
 cutoff = 0.1/100
-
 
 # load the rarefied otu table
 com <- read.csv("feature_table_rarefied_taxon.csv", sep=",", header=1, row.names=1, check.names = FALSE)
 com <- t(com[, 1:120])
 
 # source the trucate function
-source("TruncateTable.r") 
+source("TruncateTable.r") # see https://github.com/Jia-Xiu/rare_biosphere_assembly
 
 # The truncated datasets can be stored as follows: 
 truncated_ds_dominant <-TruncateTable(com, cutoff, typem="dominant") 
@@ -47,7 +45,6 @@ str(truncated_ds_rare_without_dominant)
 
 
 # load the common and rare biospheres dataset
-
 common <- read.csv(paste("schier_dna_cdna_common", cutoff, "cutoff.csv", sep="_"), sep=",", header=1, row.names=1)
 common <- t(common)
 common[is.na(common)] <- 0
@@ -72,7 +69,7 @@ str(rare)
 cat("\nthe number of samples is:", nrow(rare), "\nthe number of species/ASVs is:", ncol(rare),
     "\nthe range of sequence number among samples is:", range(rowSums(rare)))
 
-# Venn digram for the overlap between rare and common --------------------------------------------------------
+# Venn digram for the overlap between rare and common 
 venn.plot <- venn.diagram(
   x = list(
     common_RNA = colnames(common_cdna),
@@ -101,7 +98,8 @@ venn.plot <- venn.diagram(
 
 
 
-# calculate the rRNA:DNA ratio for the two biospheres ------------------------------------------------
+
+# calculate the rRNA:DNA ratio for the two biospheres 
 # common biosphere
 common <- read.csv(paste("schier_dna_cdna_common", cutoff, "cutoff.csv", sep="_"), sep=",", header=1, row.names=1)
 common <- t(common)

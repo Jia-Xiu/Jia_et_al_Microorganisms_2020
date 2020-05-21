@@ -1,5 +1,5 @@
 
-# assembly processes governing bacterial community succession based on DNA and RNA data
+# Comparing the Influence of Assembly Processes Governing Bacterial Community Succession Based on DNA and RNA Data 
 The following is the scripts related to this manuscript: Comparing the influence of assembly processes governing bacterial community succession based on DNA and RNA data, authored by Xiu Jia, Francisco Dini-Andreote and Joana Falcão Salles
 
 ## Analysis 16S rRNA sequences (DNA- and RNA-based) 

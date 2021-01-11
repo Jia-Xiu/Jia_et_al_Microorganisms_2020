@@ -159,7 +159,7 @@ qiime tools export \
 
 # assign taxonomy by silva database
 qiime feature-classifier classify-sklearn \
-  --i-classifier /data/p278113/QIIME2/silva-132-99-515-806-nb-classifier.qza \
+  --i-classifier ../QIIME2/silva-132-99-515-806-nb-classifier.qza \
   --i-reads rep-seqs.qza \
   --o-classification taxonomy.qza
 

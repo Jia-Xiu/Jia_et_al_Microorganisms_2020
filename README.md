@@ -21,7 +21,7 @@ Work at [QIIME2/2019.10](https://docs.qiime2.org/2019.10/) environment, using th
 
 * Community assembly analysis:
 	* [https://github.com/stegen/Stegen_etal_ISME_2013](https://github.com/stegen/Stegen_etal_ISME_2013)
-	* [Fraction.Assembly.Processes_rna_dna.R](https://github.com/Jia-Xiu/Jia_et_al_Microorganisms_2020/blob/master/Fraction.Assembly.Processes_rna_dna.R)
+	* [Franction.Addembly.Processes_rna_dna.Rmd](https://github.com/Jia-Xiu/Jia_et_al_Microorganisms_2020/blob/master/Franction.Addembly.Processes_rna_dna.Rmd)
 
 ## Author
 * **Jia, Xiu** 

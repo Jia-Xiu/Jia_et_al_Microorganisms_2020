@@ -20,7 +20,7 @@ Work at [QIIME2/2019.10](https://docs.qiime2.org/2019.10/) environment, using th
 	* [TruncateTable.R](https://github.com/Jia-Xiu/rare_biosphere_assembly/blob/master/TruncateTable.R)
 
 * Community assembly analysis:
-	* [https://github.com/stegen/Stegen_etal_ISME_2013](https://github.com/stegen/Stegen_etal_ISME_2013)
+	* [Script] () updated from [https://github.com/stegen/Stegen_etal_ISME_2013](https://github.com/stegen/Stegen_etal_ISME_2013)
 	* [Franction.Addembly.Processes_rna_dna.Rmd](https://github.com/Jia-Xiu/Jia_et_al_Microorganisms_2020/blob/master/Franction.Addembly.Processes_rna_dna.Rmd)
 
 ## Author
